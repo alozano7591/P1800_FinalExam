@@ -1,0 +1,52 @@
+<!-- Alfredo Lozano alozano7591@conestogac.on.ca  --> 
+
+<%- include('layouts/header'); -%>
+<body>
+    
+    <header>
+        <h1>Alfredo Lozano / 5397591</h1>
+    </header>
+
+    <%- include('layouts/nav'); -%>
+    <section>
+       <table>
+           <thead>
+               <tr>
+                    <th>Name</th>
+                    <th>Student ID</th>
+
+                    <th>HTML5</th>
+                    <th>CSS3</th>
+                    <th>Pens</th>
+
+                    <th>Subtotal</th>
+                    <th>Tax</th>
+                    <th>Total</th>               
+                </tr>
+           </thead>
+           <tbody>
+                <%
+                    for(var order of orders){
+                        %>
+                            <tr>
+                                <td><%= order.name %></td>
+                                <td><%= order.sNumber %></td>
+                                
+                                <td><%= order.html5 %></td>
+                                <td><%= order.css3 %> </td>
+                                <td><%= order.pens %> </td>
+
+                                <td><%= order.subTotal.toFixed(2) %> </td>
+                                <td><%= order.tax.toFixed(2) %> </td>
+                                <td><%= order.total.toFixed(2) %> </td>
+                           </tr>
+                        <%
+                    }
+                %>
+           </tbody>
+       </table>
+    </section>
+</body>
+<%- include('layouts/footer'); -%>
+
+

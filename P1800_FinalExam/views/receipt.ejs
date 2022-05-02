@@ -1,0 +1,91 @@
+<section class="receiptSect">
+    <h2 id="formResult">Thank you for your order!</h2>
+  
+    <div class="receiptData">
+
+      <%
+        if(typeof(total) != 'undefined'){
+          %>
+
+          <table class="receiptTable">
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Name </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> <%= name %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Student ID</label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> <%= sNumber %> </label> 
+              </div>
+            </div>
+
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label><%= html5 %> HTML5 @ $62.99</label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= html5Tot %>  </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label><%= css3 %> CSS3 @ $51.99</label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= css3Tot %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label><%= pens %> Pen @ $2.99</label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= pensTot %>  </label> 
+              </div>
+            </div>
+
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Subtotal </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= subTotal.toFixed(2) %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Tax </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= tax.toFixed(2) %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Total </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= total.toFixed(2) %> </label> 
+              </div>
+            </div>
+          </table>
+          <%
+        }
+      %>
+
+    </div>
+</section>

@@ -1,0 +1,27 @@
+<%- include('layouts/header'); -%>
+<body>
+    <header>
+        <h1>Alfredo Lozano / 5397591</h1>
+    </header>
+
+    <%- include('layouts/nav'); -%>
+
+    <!-- Here is our awesome receipt-->
+
+    <%
+      if(typeof(subTotal) != 'undefined'){
+        %>
+          <%- include('receipt'); -%>
+        <%
+      }
+    %>
+  
+    <!-- END OF receipt area -->
+
+    </section>
+
+   <div class="clear"></div>
+
+   <%- include('layouts/footer'); -%>
+
+</body>
