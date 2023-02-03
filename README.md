@@ -1,5 +1,5 @@
 # Introduction 
-This repo contains my final exam for my second semester class "Programming Dynamic Websites".
+This repo contains my final exam for my second semester class "Programming Dynamic Websites". 
 
 # Details
-The project contains a basic setup of a database using MongoDB and Node.js.
+During the exam we were tasked with setting up a dynamic website and a database using MongoDB and Node.js.
